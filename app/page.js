@@ -43,21 +43,10 @@ const services = [
   },
 ];
 
-/* ============================================
-   Stats
-   ============================================ */
-const stats = [
-  { number: "50+", label: "Projects Delivered" },
-  { number: "30+", label: "Happy Clients" },
-  { number: "4", label: "Core Specialists" },
-  { number: "3+", label: "Years Experience" },
-];
-
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const servicesRef = useScrollAnimationGroup();
   const aboutRef = useScrollAnimationGroup();
-  const statsRef = useScrollAnimationGroup();
   const philosophyRef = useScrollAnimation();
 
   useEffect(() => {
@@ -213,7 +202,7 @@ export default function Home() {
                 {/* Floating label */}
                 <div className="absolute -bottom-6 -right-4 md:right-8 bg-navy text-white px-6 py-4 rounded-xl shadow-lg">
                   <p className="text-[0.625rem] uppercase tracking-[0.25em] text-lavender mb-1">Founded</p>
-                  <p className="font-heading text-2xl font-semibold">2022</p>
+                  <p className="font-heading text-2xl font-semibold">2025</p>
                 </div>
               </div>
             </div>
@@ -242,26 +231,6 @@ export default function Home() {
                 Read Our Story →
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          STATS — Minimal, Tatva-style
-          ══════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-cream border-y border-navy/5">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
-            {stats.map((stat, i) => (
-              <div key={stat.label} className={`scroll-fade stagger-${i + 1} text-center`}>
-                <p className="font-heading text-[2.5rem] md:text-[3.5rem] font-semibold text-navy mb-2">
-                  {stat.number}
-                </p>
-                <p className="text-[0.6875rem] font-medium uppercase tracking-[0.25em] text-muted">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

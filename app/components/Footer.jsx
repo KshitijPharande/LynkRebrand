@@ -26,19 +26,15 @@ export default function Footer() {
         opacity={0.05}
       />
 
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 md:py-20 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-12 md:py-14 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
-          <div className="space-y-5">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/lynk-logo-v2.webp"
-                alt="Lynk Digital"
-                width={114}
-                height={60}
-                className="h-8 md:h-9 w-auto object-contain brightness-200"
-                unoptimized
-              />
+          <div className="space-y-4">
+            <Link
+              href="/"
+              className="font-heading text-xl font-semibold text-lavender tracking-tight hover:text-white transition-colors duration-300"
+            >
+              Lynk Digital
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-[280px]">
               Empowering brands by crafting compelling digital identities, delivering cutting-edge web and UI/UX solutions.
@@ -61,7 +57,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             <h3 className="text-xs font-medium uppercase tracking-[0.2em] !text-lavender">
               Quick Links
             </h3>
@@ -80,7 +76,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             <h3 className="text-xs font-medium uppercase tracking-[0.2em] !text-lavender">
               Services
             </h3>
@@ -99,7 +95,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             <h3 className="text-xs font-medium uppercase tracking-[0.2em] !text-lavender">
               Contact Us
             </h3>
@@ -122,7 +118,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-14 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 mt-8 pt-5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Lynk Digital. All rights reserved.
           </p>
