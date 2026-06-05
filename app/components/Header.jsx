@@ -36,7 +36,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
+        mobileOpen
+          ? "bg-cream"
+          : scrolled
           ? "bg-cream/90 backdrop-blur-md shadow-nav"
           : "bg-transparent"
       }`}
@@ -44,7 +46,11 @@ export default function Header() {
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <div className="flex items-center justify-between h-[72px] md:h-[80px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 group"
+            onClick={() => setMobileOpen(false)}
+          >
             <Image
               src="/lynk-logo.png"
               alt="Lynk Digital"
@@ -87,7 +93,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-navy"
+            className="md:hidden p-2 text-navy relative z-50"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -112,7 +118,9 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden fixed inset-0 top-[72px] bg-cream transition-all duration-500 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          mobileOpen
+            ? "opacity-100 visible pointer-events-auto"
+            : "opacity-0 invisible pointer-events-none"
         }`}
       >
         <nav className="flex flex-col items-start justify-center h-full px-10 gap-1 -mt-24">
@@ -127,6 +135,7 @@ export default function Header() {
                 mobileOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
               } ${pathname === link.href ? "text-navy" : "text-navy/30 hover:text-navy"}`}
               style={{ transitionDelay: mobileOpen ? `${i * 80 + 100}ms` : "0ms" }}
+              onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </Link>
@@ -138,6 +147,7 @@ export default function Header() {
                 mobileOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
               }`}
               style={{ transitionDelay: mobileOpen ? "500ms" : "0ms" }}
+              onClick={() => setMobileOpen(false)}
             >
               Start a Project →
             </Link>
