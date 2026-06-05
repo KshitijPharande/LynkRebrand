@@ -50,7 +50,7 @@ export default function ContactPage() {
           ══════════════════════════════════════ */}
       <section className="relative min-h-[55vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/about-3.webp" alt="" fill className="object-cover" priority quality={85} />
+          <Image src="/contact-bg-v4.png" alt="" fill className="object-cover" priority quality={85} />
           <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/70 to-cream/30" />
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-28 md:pt-36 pb-16 md:pb-20">
