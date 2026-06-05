@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: only light;
+}
+
 /* ============================================
    LYNK DIGITAL — Design System (Tailwind v4)
    ============================================ */

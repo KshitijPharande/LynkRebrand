@@ -64,6 +64,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <meta name="theme-color" content="#2D3561" />
+        <meta name="color-scheme" content="only light" />
         <link rel="icon" href="/lynk-logo.webp" type="image/webp" />
       </head>
       <body className="min-h-screen flex flex-col overflow-x-hidden">
