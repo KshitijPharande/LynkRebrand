@@ -43,7 +43,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 relative z-50">
         <div className="flex items-center justify-between h-[72px] md:h-[80px]">
           {/* Logo */}
           <Link
@@ -52,16 +52,14 @@ export default function Header() {
             onClick={() => setMobileOpen(false)}
           >
             <Image
-              src="/lynk-logo.png"
+              src="/lynk-logo-v2.webp"
               alt="Lynk Digital"
-              width={36}
-              height={36}
-              className="w-9 h-9 object-contain"
+              width={114}
+              height={60}
+              className="h-10 md:h-12 w-auto object-contain"
               priority
+              unoptimized
             />
-            <span className="font-heading text-[1.125rem] font-semibold text-navy tracking-tight">
-              Lynk Digital
-            </span>
           </Link>
 
           {/* Desktop Nav — editorial style */}
@@ -82,7 +80,6 @@ export default function Header() {
                 )}
               </Link>
             ))}
-            <div className="w-px h-5 bg-navy/10 mx-1" />
             <Link
               href="/contact"
               className="text-[0.6875rem] font-medium uppercase tracking-[0.15em] text-navy border border-navy/20 px-5 py-2 transition-all duration-300 hover:bg-navy hover:text-white hover:border-navy"
@@ -117,10 +114,10 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 top-[72px] bg-cream transition-all duration-500 ${
+        className={`md:hidden fixed inset-x-0 bottom-0 top-[72px] bg-cream z-40 transition-transform duration-500 ease-in-out ${
           mobileOpen
-            ? "opacity-100 visible pointer-events-auto"
-            : "opacity-0 invisible pointer-events-none"
+            ? "translate-y-0 visible"
+            : "-translate-y-full invisible"
         }`}
       >
         <nav className="flex flex-col items-start justify-center h-full px-10 gap-1 -mt-24">

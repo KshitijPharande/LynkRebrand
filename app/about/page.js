@@ -29,7 +29,7 @@ export default function AboutPage() {
           <Image src="/about-1.webp" alt="" fill className="object-cover" priority quality={85} />
           <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/70 to-cream/30" />
         </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pb-16 md:pb-20">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-28 md:pt-36 pb-16 md:pb-20">
           <div ref={heroRef} className="scroll-fade max-w-2xl">
             <p className="text-[0.6875rem] font-medium uppercase tracking-[0.3em] text-navy/50 mb-6">
               About Us

@@ -10,11 +10,11 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { href: "/services#web-design", label: "Web Design & Development" },
-  { href: "/services#ui-ux", label: "UI/UX Design" },
   { href: "/services#social-media", label: "Social Media Marketing" },
-  { href: "/services#branding", label: "Branding & Identity" },
-  { href: "/services#seo", label: "SEO & Content Strategy" },
+  { href: "/services#smo", label: "Social Media Optimization" },
+  { href: "/services#branding", label: "Branding" },
+  { href: "/services#content-marketing", label: "Content Marketing" },
+  { href: "/services#web-development", label: "Web Development" },
 ];
 
 export default function Footer() {
@@ -30,17 +30,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="space-y-5">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/lynk-logo.png"
+                src="/lynk-logo-v2.webp"
                 alt="Lynk Digital"
-                width={36}
-                height={36}
-                className="w-9 h-9 object-contain brightness-200"
+                width={114}
+                height={60}
+                className="h-8 md:h-9 w-auto object-contain brightness-200"
+                unoptimized
               />
-              <span className="font-heading text-lg font-semibold text-lavender tracking-tight">
-                Lynk Digital
-              </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-[280px]">
               Empowering brands by crafting compelling digital identities, delivering cutting-edge web and UI/UX solutions.

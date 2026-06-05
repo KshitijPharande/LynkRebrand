@@ -19,21 +19,27 @@ const services = [
   },
   {
     num: "02",
-    title: "Branding & Identity",
-    desc: "Compelling brand identities that tell your story and leave a lasting, unforgettable impression.",
-    link: "/services#branding",
+    title: "Social Media Optimization",
+    desc: "Optimizing profiles, content distribution, and metadata to maximize organic reach and searchability across social channels.",
+    link: "/services#smo",
   },
   {
     num: "03",
-    title: "Digital Strategy & Consulting",
-    desc: "Data-driven marketing and growth plans tailored to position your brand for sustainable online success.",
-    link: "/services#digital-strategy",
+    title: "Branding",
+    desc: "Compelling brand identities, visual styling, and brand guidelines that tell your story and leave a lasting impression.",
+    link: "/services#branding",
   },
   {
     num: "04",
-    title: "Web Design & Development",
-    desc: "Custom, high-performing websites and digital platforms built to convert visitors and elevate your online presence.",
-    link: "/services#web-design",
+    title: "Content Marketing",
+    desc: "High-value, engaging copy, graphics, and video content tailored to inform, educate, and convert your target audience.",
+    link: "/services#content-marketing",
+  },
+  {
+    num: "05",
+    title: "Web Development",
+    desc: "Custom, high-performing websites and digital platforms built to convert visitors and serve as your digital home.",
+    link: "/services#web-development",
   },
 ];
 
@@ -65,46 +71,46 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO — Full viewport, bg image, Tatva-style
           ══════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
         {/* Background Image with low opacity */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg-marketing.png"
+            src="/hero-bg-marketing-v5.png"
             alt=""
             fill
             className="object-cover"
             priority
             quality={90}
           />
-          <div className="absolute inset-0 bg-cream/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cream/30 via-cream/40 to-cream/50" />
         </div>
 
         {/* Content */}
         <div
-          className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-32 pb-16"
+          className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-28 pb-12"
           style={{ transform: `translateY(${scrollY * 0.08}px)`, opacity: Math.max(0, 1 - scrollY / 600) }}
         >
           {/* Label */}
-          <p className="text-[0.6875rem] font-medium uppercase tracking-[0.3em] text-navy/60 mb-10 md:mb-14">
-            EST — A Social Media & Branding Agency for Intentional Brands
+          <p className="text-[0.6875rem] font-medium uppercase tracking-[0.3em] text-navy/60 mb-6 md:mb-8">
+            ESTD. 2025 — A Social Media & Branding Agency for Intentional Brands
           </p>
 
-          {/* Main heading — MASSIVE */}
-          <h1 className="font-heading font-semibold text-navy leading-[1.05] mb-10">
-            <span className="block text-[3rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem]">
+          {/* Main heading */}
+          <h1 className="font-heading font-semibold text-navy leading-[1.05] mb-8">
+            <span className="block text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]">
               Ideas that ask
             </span>
-            <span className="block text-[3rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem]">
+            <span className="block text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]">
               <em className="gradient-text">to be</em>{" "}
               <em className="gradient-text">experienced</em>
             </span>
-            <span className="block text-[3rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem]">
+            <span className="block text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]">
               digitally.
             </span>
           </h1>
 
           {/* Body text */}
-          <p className="max-w-lg text-base md:text-[1.0625rem] text-charcoal/80 leading-[1.8] mb-10">
+          <p className="max-w-lg text-base md:text-[1.0625rem] text-charcoal/80 leading-[1.8] mb-8">
             Lynk Digital is a social-first digital agency — a quiet force for brands that value
             clarity, organic engagement, and the kind of strategy you feel in every post, every word,
             every connection.
@@ -124,7 +130,7 @@ export default function Home() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="mt-16 md:mt-24">
+          <div className="mt-10 md:mt-14">
             <p className="text-[0.625rem] font-medium uppercase tracking-[0.3em] text-navy/40 flex items-center gap-2">
               <span>↓</span> Scroll
             </p>
@@ -280,7 +286,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <div className="w-12 h-px bg-navy/20" />
               <p className="text-[0.8125rem] text-muted">
-                <span className="text-navy font-medium">Roma Devadhar</span> — Co-Founder & CEO
+                <span className="text-navy font-medium">Team Lynk</span>
               </p>
             </div>
           </div>
