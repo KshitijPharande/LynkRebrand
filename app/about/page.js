@@ -64,13 +64,13 @@ export default function AboutPage() {
             </div>
             <div className="scroll-fade-right lg:col-span-8 space-y-6">
               <p className="text-charcoal text-[1.0625rem] md:text-lg leading-[1.9]">
-                <span className="font-heading text-[1.5rem] md:text-[1.75rem] text-navy font-semibold float-left mr-2 mt-1">W</span>hen Lynk Digital was founded, it wasn't just about posting content or running campaigns. It was about creating a space where businesses could find clarity in the chaos of the digital world — a place where social strategy meets design artistry.
+                When Lynk Digital was founded, it wasn't just about posting content or running campaigns. It was about creating a space where businesses could find clarity in the chaos of the digital world a place where social strategy meets design artistry.
               </p>
               <p className="text-charcoal text-[1.0625rem] md:text-lg leading-[1.9]">
-                We saw something most agencies were missing: authenticity with an edge. Not louder. Not flashier. But intentional, elevated, and quietly powerful — the kind of marketing that doesn't just capture attention, but holds it.
+                We saw something most agencies were missing: authenticity with an edge. Not louder. Not flashier. But intentional, elevated, and quietly powerful the kind of marketing that doesn't just capture attention, but holds it.
               </p>
               <p className="text-charcoal text-[1.0625rem] md:text-lg leading-[1.9]">
-                Today, Lynk Digital is a team of strategists, designers, developers, and storytellers who believe that the best digital work happens at the intersection of creativity and clarity. We don't chase trends — we set them.
+                Today, Lynk Digital is a team of strategists, designers, developers, and storytellers who believe that the best digital work happens at the intersection of creativity and clarity. We don't chase trends we set them.
               </p>
             </div>
           </div>
