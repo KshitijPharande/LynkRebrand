@@ -34,7 +34,7 @@ export function useScrollAnimation(options = {}) {
   return ref;
 }
 
-export function useScrollAnimationGroup(options = {}) {
+export function useScrollAnimationGroup(options = {}, deps = []) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export function useScrollAnimationGroup(options = {}) {
     return () => {
       children.forEach((child) => observer.unobserve(child));
     };
-  }, [options.threshold, options.rootMargin]);
+  }, [options.threshold, options.rootMargin, ...deps]);
 
   return ref;
 }

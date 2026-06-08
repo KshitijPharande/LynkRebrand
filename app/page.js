@@ -47,6 +47,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const servicesRef = useScrollAnimationGroup();
   const aboutRef = useScrollAnimationGroup();
+  const workRef = useScrollAnimationGroup();
   const philosophyRef = useScrollAnimation();
 
   useEffect(() => {
@@ -231,6 +232,96 @@ export default function Home() {
                 Read Our Story →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          FEATURED WORK — Editorial grid preview
+          ══════════════════════════════════════ */}
+      <section className="py-24 md:py-36 bg-cream">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+          {/* Section header */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 md:mb-20">
+            <div>
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.3em] text-navy/50 mb-4">
+                Featured Work
+              </p>
+              <h2 className="font-heading text-[2.25rem] md:text-[3rem] lg:text-[3.5rem] font-semibold text-navy leading-[1.1]">
+                Digital experiences that
+                <br />
+                <em className="gradient-text">speak quietly.</em>
+              </h2>
+            </div>
+            <Link
+              href="/work"
+              className="text-[0.8125rem] font-medium uppercase tracking-[0.12em] text-navy/70 hover:text-navy transition-colors duration-300 border-b border-navy/30 pb-0.5 self-start md:self-auto shrink-0"
+            >
+              View All Work →
+            </Link>
+          </div>
+
+          {/* Grid */}
+          <div ref={workRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Tatva",
+                category: "Branding & Web Development",
+                url: "https://tatva-ochre.vercel.app/",
+                type: "Live Site",
+                image: "/tatva.png",
+              },
+              {
+                title: "SK Physio Fit",
+                category: "Health & Wellness Portal",
+                url: "https://www.skphysiofit.com/",
+                type: "Live Site",
+                image: "/skphysiofit.png",
+              },
+              {
+                title: "The Coffee Lab",
+                category: "Food & Beverage Concept",
+                url: "https://the-coffee-lab-ochre.vercel.app/",
+                type: "Concept Demo",
+                image: "/thecoffeelab.png",
+              },
+            ].map((project, i) => (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={project.title}
+                className={`scroll-fade stagger-${i + 1} group flex flex-col bg-cream-light/40 border border-navy/5 rounded-2xl overflow-hidden card-hover`}
+              >
+                <div className="relative h-[200px] w-full overflow-hidden bg-navy/5">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-w: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-navy/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
+                    <span className="bg-cream text-navy font-body text-[0.6875rem] font-semibold uppercase tracking-[0.15em] py-2 px-4 rounded-full shadow-lg">
+                      Visit Project ↗
+                    </span>
+                  </div>
+                  <span className="absolute top-3 left-3 text-[0.5rem] font-semibold uppercase tracking-[0.15em] bg-cream text-navy/80 py-1 px-2 rounded-sm shadow-sm">
+                    {project.type}
+                  </span>
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[0.5625rem] font-medium uppercase tracking-[0.2em] text-lavender-dark block mb-1">
+                      {project.category}
+                    </span>
+                    <h3 className="font-heading text-lg font-semibold text-navy group-hover:text-navy-light transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
