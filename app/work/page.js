@@ -98,6 +98,33 @@ const projects = [
     tags: ["Next.js", "Storefront", "SEO"],
     image: "/khajina.png",
   },
+  {
+    title: "Silkroute Creations",
+    category: "Social Media Marketing",
+    type: "social",
+    url: "https://www.instagram.com/",
+    desc: "Comprehensive social media marketing strategy, visual curation, and content styling for an artisanal fashion and lifestyle brand.",
+    tags: ["Social Strategy", "Grid Styling", "Content Curation"],
+    image: "/about-1.webp",
+  },
+  {
+    title: "Silkroute Exhibitors",
+    category: "Event Marketing & Social Media",
+    type: "social",
+    url: "https://www.instagram.com/",
+    desc: "Targeted event campaigns, real-time social coverage, and community engagement for high-end boutique exhibitions.",
+    tags: ["Campaign Design", "Event Promotion", "Engagement"],
+    image: "/about-2.webp",
+  },
+  {
+    title: "Bellissimaa Boutique",
+    category: "Social Media & Branding",
+    type: "social",
+    url: "https://www.instagram.com/",
+    desc: "Bespoke social media management, aesthetic content creation, and organic growth campaigns for a luxury fashion boutique.",
+    tags: ["Instagram Growth", "Aesthetic Curation", "Copywriting"],
+    image: "/about-3.webp",
+  },
 ];
 
 export default function WorkPage() {
@@ -147,6 +174,7 @@ export default function WorkPage() {
             {[
               { id: "all", label: "All Work" },
               { id: "live", label: "Live Client Sites" },
+              { id: "social", label: "Social Media Clients" },
               { id: "demo", label: "Concept Demos" },
             ].map((tab) => (
               <button
@@ -188,12 +216,20 @@ export default function WorkPage() {
                   />
                   <div className="absolute inset-0 bg-navy/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-xs">
                     <span className="bg-cream text-navy font-body text-xs font-semibold uppercase tracking-[0.15em] py-2.5 px-6 rounded-full shadow-lg">
-                      {project.type === "live" ? "Visit Live Site ↗" : "View Interactive Demo ↗"}
+                      {project.type === "live"
+                        ? "Visit Live Site ↗"
+                        : project.type === "social"
+                        ? "View Instagram ↗"
+                        : "View Interactive Demo ↗"}
                     </span>
                   </div>
                   {/* Badge */}
                   <span className="absolute top-4 left-4 text-[0.5625rem] font-semibold uppercase tracking-[0.15em] bg-cream text-navy/80 py-1.5 px-3 rounded-md shadow-sm">
-                    {project.type === "live" ? "Live Site" : "Concept Demo"}
+                    {project.type === "live"
+                      ? "Live Site"
+                      : project.type === "social"
+                      ? "Social Client"
+                      : "Concept Demo"}
                   </span>
                 </div>
 
